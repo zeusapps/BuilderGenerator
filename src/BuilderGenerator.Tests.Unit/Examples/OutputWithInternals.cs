@@ -12,14 +12,14 @@ namespace BuilderGenerator.UnitTests
 {
     public partial class PersonBuilderWithInternals : BuilderGenerator.Builder<BuilderGenerator.UnitTests.Person>
     {
-        public System.Lazy<string> FirstName = new System.Lazy<string>(() => default(string));
-        public System.Lazy<string> InternalString = new System.Lazy<string>(() => default(string));
-        public System.Lazy<string> LastName = new System.Lazy<string>(() => default(string));
+        public System.Lazy<string> FirstName = new System.Lazy<string>(() => default(string)!);
+        public System.Lazy<string> InternalString = new System.Lazy<string>(() => default(string)!);
+        public System.Lazy<string> LastName = new System.Lazy<string>(() => default(string)!);
 
         /// <summary>Initializes a new instance of the <see cref="PersonBuilderWithInternals"/> class using the provided <see cref="BuilderGenerator.UnitTests.Person" /> for the Object value.</summary>
         /// <param name="value">The <see cref="BuilderGenerator.UnitTests.Person" /> instance to build on.</param>
         /// <remarks>Note: <paramref name="value" /> is not simply a template. The actual instance will be remembered and returned.</remarks>
-        public PersonBuilderWithInternals(BuilderGenerator.UnitTests.Person value = null)
+        public PersonBuilderWithInternals(BuilderGenerator.UnitTests.Person? value = null)
         {
             if (value != null)
             {
@@ -84,7 +84,7 @@ namespace BuilderGenerator.UnitTests
 
         public PersonBuilderWithInternals WithoutFirstName()
         {
-            FirstName = new System.Lazy<string>(() => default(string));
+            FirstName = new System.Lazy<string>(() => default(string)!);
             return this;
         }
 
@@ -101,7 +101,7 @@ namespace BuilderGenerator.UnitTests
 
         public PersonBuilderWithInternals WithoutInternalString()
         {
-            InternalString = new System.Lazy<string>(() => default(string));
+            InternalString = new System.Lazy<string>(() => default(string)!);
             return this;
         }
 
@@ -118,7 +118,7 @@ namespace BuilderGenerator.UnitTests
 
         public PersonBuilderWithInternals WithoutLastName()
         {
-            LastName = new System.Lazy<string>(() => default(string));
+            LastName = new System.Lazy<string>(() => default(string)!);
             return this;
         }
     }

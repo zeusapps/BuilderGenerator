@@ -12,13 +12,13 @@ namespace BuilderGenerator.UnitTests
 {
     public partial class PersonBuilderWithoutInternals : BuilderGenerator.Builder<BuilderGenerator.UnitTests.Person>
     {
-        public System.Lazy<string> FirstName = new System.Lazy<string>(() => default(string));
-        public System.Lazy<string> LastName = new System.Lazy<string>(() => default(string));
+        public System.Lazy<string> FirstName = new System.Lazy<string>(() => default(string)!);
+        public System.Lazy<string> LastName = new System.Lazy<string>(() => default(string)!);
 
         /// <summary>Initializes a new instance of the <see cref="PersonBuilderWithoutInternals"/> class using the provided <see cref="BuilderGenerator.UnitTests.Person" /> for the Object value.</summary>
         /// <param name="value">The <see cref="BuilderGenerator.UnitTests.Person" /> instance to build on.</param>
         /// <remarks>Note: <paramref name="value" /> is not simply a template. The actual instance will be remembered and returned.</remarks>
-        public PersonBuilderWithoutInternals(BuilderGenerator.UnitTests.Person value = null)
+        public PersonBuilderWithoutInternals(BuilderGenerator.UnitTests.Person? value = null)
         {
             if (value != null)
             {
@@ -81,7 +81,7 @@ namespace BuilderGenerator.UnitTests
 
         public PersonBuilderWithoutInternals WithoutFirstName()
         {
-            FirstName = new System.Lazy<string>(() => default(string));
+            FirstName = new System.Lazy<string>(() => default(string)!);
             return this;
         }
 
@@ -98,7 +98,7 @@ namespace BuilderGenerator.UnitTests
 
         public PersonBuilderWithoutInternals WithoutLastName()
         {
-            LastName = new System.Lazy<string>(() => default(string));
+            LastName = new System.Lazy<string>(() => default(string)!);
             return this;
         }
     }
