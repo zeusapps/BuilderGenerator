@@ -12,13 +12,16 @@
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <PackageId>BuilderGenerator</PackageId>
+    <PackageId>zeusapps-BuilderGenerator</PackageId>
     <PackageIcon>logo.png</PackageIcon>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/MelGrubb/BuilderGenerator</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>BDD;TDD;Testing;Builders;Code Generation;Source Generators</PackageTags>
     <PackageReleaseNotes>
+      v2.4.1
+      - Updated #nullable annotations
+
       v2.4.0
       - Test code reorganization
       - Moved WithObject from the base class to the generated builder class
